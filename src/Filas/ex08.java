@@ -20,15 +20,15 @@
 
 package Filas;
 
+import java.io.File;
+
 import javax.swing.JOptionPane;
 
 public class ex08 {
     
     public static void main(String[] args) {
-        Fila Fila = new Fila();
 
-        int tamanho = 10;
-        int vetor[] = new int[tamanho];
+        Fila Fila = new Fila();
 
         String input;
 
@@ -42,13 +42,20 @@ public class ex08 {
 
             switch (input) {
                 case "A":
-                    
+                    int inserir = Integer.parseInt(
+                        JOptionPane.showInputDialog(
+                            "Digite o número que queira inserir."
+                        )
+                    );
+
+                    Fila.enQueue(inserir);                    
                 break;
                 case "B":
-                    
+                    JOptionPane.showMessageDialog(null, "Primeiro elemento: " + Fila.front());
                 break;
                 case "C":
-                    
+                    JOptionPane.showMessageDialog(null, "Retirando o primeiro elemento.");
+                    Fila.deQueue();
                 break;
             
                 default:
