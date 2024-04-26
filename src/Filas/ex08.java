@@ -20,15 +20,13 @@
 
 package Filas;
 
-import java.io.File;
-
 import javax.swing.JOptionPane;
 
 public class ex08 {
     
     public static void main(String[] args) {
 
-        Fila Fila = new Fila();
+        FilaINT Fila = new FilaINT();
 
         String input;
 

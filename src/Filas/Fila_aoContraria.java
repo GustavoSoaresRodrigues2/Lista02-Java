@@ -2,27 +2,19 @@ package Filas;
 
 import javax.swing.JOptionPane;
 
-public class Fila {
+public class Fila_aoContraria {
     private int[] iFila;
     private int iSPos; // Ponteiro de inserção
     private int iRPos; // Ponteiro de remoção
     private int iTamanho; // Tamanho máximo da fila
 
-    public Fila() {
-        iTamanho = 5;
+    public Fila_aoContraria() {
+        iTamanho = 15; // Tamanho máximo da fila + 1 (para comportar 15 elementos)
         iFila = new int[iTamanho];
-        iSPos = 0;
-        iRPos = 0;
+        iSPos = 9; // Começa a fila no índice 9
+        iRPos = 9; // Começa a fila no índice 9
     }
     
-    // Voce pode decidir o tamanho do vetor
-    // public Fila(int tamanho) {
-    //     iTamanho = tamanho;
-    //     iFila = new int[iTamanho];
-    //     iSPos = 0;
-    //     iRPos = 0;
-    // }
-
     public int size() {
         return (iSPos - iRPos + iTamanho) % iTamanho;
     }
