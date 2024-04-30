@@ -2,7 +2,7 @@ package Filas;
 
 import javax.swing.JOptionPane;
 
-public class FilaINT {
+public class FilaOperacoes {
     private final int TAMANHO_MAXIMO;
     private int[] elementos;
     private int inicio;
@@ -10,8 +10,8 @@ public class FilaINT {
     private int tamanho;
 
     // Construtor que define o tamanho máximo da fila
-    public FilaINT() {
-        TAMANHO_MAXIMO = 10;
+    public FilaOperacoes() {
+        TAMANHO_MAXIMO = 5;
         elementos = new int[TAMANHO_MAXIMO];
         inicio = 0;
         fim = -1; // Inicia como -1 para indicar que a fila está vazia
@@ -61,5 +61,53 @@ public class FilaINT {
         return elementos[inicio];
     }
 
-    
+    public int soma;
+    public int subtracao;
+    public int multiplicacao;
+    public int divisao;
+
+    public int soma() {
+        if (isFull()) {
+            int v1 = elementos[0];
+            int v2 = elementos[1];
+
+            return v1 + v2;
+        } else {
+            return 0;
+        }
+    }
+
+    public int subtracao() {
+        if (isFull()) {
+            int v1 = soma();
+            int v2 = elementos[2];
+
+            return v1 - v2;
+        } else {
+            return 0;
+        }
+    }
+
+    public int multiplicacao() {
+        if (isFull()) {
+            int v1 = subtracao();
+            int v2 = elementos[3];
+
+            return v1 * v2;
+        } else {
+            return 0;
+        }
+    }
+
+    public int divisao() {
+        if (isFull()) {
+            int v1 = multiplicacao();
+            int v2 = elementos[4];
+
+            return v1 / v2;
+        } else {
+            return 0;
+        }
+    }
+
 }
