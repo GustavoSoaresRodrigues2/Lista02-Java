@@ -60,6 +60,4 @@ public class FilaINT {
         }
         return elementos[inicio];
     }
-
-    
 }

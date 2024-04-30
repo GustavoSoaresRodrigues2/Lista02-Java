@@ -71,11 +71,6 @@ public class FilaOperacoesTAD {
         return elementos[inicio];
     }
 
-    public int soma;
-    public int subtracao;
-    public int multiplicacao;
-    public int divisao;
-
     public int soma() {
         if (isFull()) {
 
@@ -122,5 +117,4 @@ public class FilaOperacoesTAD {
             return 0;
         }
     }
-
 }
